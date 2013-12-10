@@ -14,7 +14,7 @@ if ( ! isset( $content_width ) ) {
 
 // Assets/vendor dir
 if( ! defined( 'SCAFFOLD_VENDOR_DIR' ) ) {
-	define( 'SCAFFOLD_VENDOR_DIR', WP_CONTENT_URL . '/vendor' );
+	define( 'SCAFFOLD_VENDOR_DIR', WP_CONTENT_URL . '/vendor' ); // get_template_directory_uri()
 }
 
 /**
