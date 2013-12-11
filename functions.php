@@ -17,21 +17,78 @@ if( ! defined( 'SCAFFOLD_VENDOR_DIR' ) ) {
 	define( 'SCAFFOLD_VENDOR_DIR', WP_CONTENT_URL . '/vendor' ); // get_template_directory_uri()
 }
 
+
+if( ! function_exists( 'scaffold_setup' ) ) :
 /**
- * Excerpt length
+ * Sets up theme defaults and registers support for various WordPress features.
+ *
+ * Note that this function is hooked into the after_setup_theme hook, which
+ * runs before the init hook. The init hook is too late for some features, such
+ * as indicating support for post thumbnails.
  */
-function scaffold_excerpt_length( $length ) 
+function scaffold_child_setup()
 {
-	return 55;
 }
-add_filter( 'excerpt_length', 'scaffold_excerpt_length' );
+endif;
+add_action( 'after_theme_setup', 'scaffold_child_setup' );
 
 /**
- * Exceprt more link
+ * Enqueue scripts and styles.
  */
-function scaffold_excerpt_more( $more ) 
+function scaffold_child_styles_scripts()
 {
-	return ' [...]';
 }
-add_filter( 'excerpt_more', 'scaffold_excerpt_more' );
+add_action( 'init', 'scaffold_child_styles_scripts' );
+
+/**
+ * Register styles.
+ */
+function scaffold_child_register_styles()
+{
+}
+
+/**
+ * Enqueue styles.
+ */
+function scaffold_child_enqueue_styles()
+{
+}
+
+/**
+ * Register scripts
+ */
+function scaffold_child_register_scripts() 
+{
+}
+
+/**
+ * Enqueue scripts
+ */
+function scaffold_child_enqueue_scripts()
+{	
+	// Localize
+	scaffold_child_localize_scripts();
+}
+
+/**
+ * Localize scripts.
+ */
+function scaffold_child_localize_scripts()
+{
+}
+
+/**
+ * All scaffold filters
+ */
+require get_stylesheet_directory() . '/includes/filters.php';
+
+/**
+ * All scaffold filters for admin
+ */
+require get_stylesheet_directory() . '/includes/filters-admin.php';
+
+/**
+ * Helper functions
+ */
+require get_stylesheet_directory() . '/includes/helpers.php';
 

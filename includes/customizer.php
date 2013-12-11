@@ -39,5 +39,4 @@ class Scaffold_Customizer
 		));
 	}
 }
-
 $customizer = new Scaffold_Customizer();
