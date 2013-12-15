@@ -30,7 +30,7 @@ function scaffold_child_setup()
 {
 }
 endif;
-add_action( 'after_theme_setup', 'scaffold_child_setup' );
+add_action( 'scaffold_child_init', 'scaffold_child_setup' );
 
 /**
  * Enqueue scripts and styles.
