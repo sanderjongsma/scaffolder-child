@@ -1,11 +1,10 @@
 jQuery.noConflict();
-
-( function( $ ) {
+(function($) {
 	
-	$('.tabs').tabs();
+	$('.js-tabs').tabs();
 		
-	$('input.example, textarea.example').example(function() {
-		return $(this).attr('title');
-	});
+	// $('input.js-example, textarea.js-example').example(function() {
+	// 	return $(this).attr('title');
+	// });
 	
-} )( jQuery );
+})(jQuery);
