@@ -59,13 +59,18 @@ function scaffold_child_enqueue_styles()
  */
 function scaffold_child_register_scripts() 
 {
+	// Theme
+	wp_register_script( 'functions', get_stylesheet_directory_uri() . '/assets/js/functions.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-tabs' ), '', true);
 }
 
 /**
  * Enqueue scripts
  */
 function scaffold_child_enqueue_scripts()
-{	
+{
+	// Theme
+	wp_enqueue_script( 'functions' );
+	
 	// Localize
 	scaffold_child_localize_scripts();
 }
