@@ -18,7 +18,7 @@ if( ! defined( 'SCAFFOLD_VENDOR_DIR' ) ) {
 }
 
 
-if( ! function_exists( 'scaffold_setup' ) ) :
+if( ! function_exists( 'scaffold_child_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
