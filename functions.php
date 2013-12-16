@@ -110,3 +110,13 @@ require get_stylesheet_directory() . '/includes/filters-admin.php';
  */
 require get_stylesheet_directory() . '/includes/helpers.php';
 
+/**
+ * Template additions / changes
+ */
+require get_stylesheet_directory() . '/includes/template.php';
+
+/**
+ * Helper functions
+ */
+require get_stylesheet_directory() . '/includes/customizer.php';
+
