@@ -12,9 +12,14 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640;
 }
 
+// Assets/vendor url
+if( ! defined( 'SCAFFOLD_VENDOR_URL' ) ) {
+	define( 'SCAFFOLD_VENDOR_URL', WP_CONTENT_URL . '/vendor' ); // get_stylesheet_directory_uri()
+}
+
 // Assets/vendor dir
 if( ! defined( 'SCAFFOLD_VENDOR_DIR' ) ) {
-	define( 'SCAFFOLD_VENDOR_DIR', WP_CONTENT_URL . '/vendor' ); // get_template_directory_uri()
+	define( 'SCAFFOLD_VENDOR_DIR', WP_CONTENT_DIR . '/vendor' );
 }
 
 
