@@ -122,7 +122,11 @@ require get_stylesheet_directory() . '/includes/helpers.php';
 require get_stylesheet_directory() . '/includes/template.php';
 
 /**
- * Helper functions
+ * Customizer
  */
 require get_stylesheet_directory() . '/includes/customizer.php';
 
+/**
+ * Shortcodes
+ */
+require get_stylesheet_directory() . '/includes/shortcodes.php';
