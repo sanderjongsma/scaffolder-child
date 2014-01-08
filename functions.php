@@ -31,11 +31,20 @@ if( ! function_exists( 'scaffold_child_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function scaffold_child_setup()
+function scaffold_child_init()
 {
 }
 endif;
-add_action( 'scaffold_child_init', 'scaffold_child_setup' );
+add_action( 'scaffold_child_init', 'scaffold_child_init' );
+
+/**
+ * Setup fired at this location (not after the parent init)
+ */
+function scaffold_child_setup()
+{
+	include( SCAFFOLD_VENDOR_DIR . '/gizburdt/cuztom/cuztom.php' );
+}
+add_action( 'init', 'scaffold_child_setup' );
 
 /**
  * Enqueue scripts and styles.
@@ -101,11 +110,6 @@ function scaffold_child_localize_scripts()
 }
 
 /**
- * Include/require other files/libraries
- */
-include( SCAFFOLD_VENDOR_DIR . '/gizburdt/cuztom/cuztom.php' );
-
-/**
  * All scaffold filters
  */
 require get_stylesheet_directory() . '/includes/filters.php';
@@ -121,14 +125,19 @@ require get_stylesheet_directory() . '/includes/filters-admin.php';
 require get_stylesheet_directory() . '/includes/helpers.php';
 
 /**
+ * Customizer
+ */
+require get_stylesheet_directory() . '/includes/customizer.php';
+
+/**
  * Template additions / changes
  */
 require get_stylesheet_directory() . '/includes/template.php';
 
 /**
- * Customizer
+ * Content types; Post types, Meta boxes
  */
-require get_stylesheet_directory() . '/includes/customizer.php';
+require get_stylesheet_directory() . '/includes/content-types.php';
 
 /**
  * Shortcodes
