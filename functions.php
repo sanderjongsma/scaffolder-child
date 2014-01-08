@@ -33,7 +33,6 @@ if( ! function_exists( 'scaffold_child_setup' ) ) :
  */
 function scaffold_child_setup()
 {
-	include( SCAFFOLD_VENDOR_DIR . '/gizburdt/cuztom/cuztom.php' );
 }
 endif;
 add_action( 'scaffold_child_init', 'scaffold_child_setup' );
@@ -100,6 +99,11 @@ function scaffold_child_localize_scripts()
 		'ajax_url'			=> admin_url( 'admin-ajax.php' )
 	) );
 }
+
+/**
+ * Include/require other files/libraries
+ */
+include( SCAFFOLD_VENDOR_DIR . '/gizburdt/cuztom/cuztom.php' );
 
 /**
  * All scaffold filters
