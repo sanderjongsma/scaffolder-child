@@ -38,15 +38,6 @@ endif;
 add_action( 'scaffold_child_hook', 'scaffold_child_init' );
 
 /**
- * Setup fired at this location (not after the parent init)
- */
-function scaffold_child_setup()
-{
-	include( SCAFFOLD_VENDOR_DIR . '/gizburdt/cuztom/cuztom.php' );
-}
-add_action( 'init', 'scaffold_child_setup' );
-
-/**
  * Enqueue scripts and styles.
  */
 function scaffold_child_styles_scripts()
@@ -108,6 +99,11 @@ function scaffold_child_localize_scripts()
 		'ajax_url'			=> admin_url( 'admin-ajax.php' )
 	) );
 }
+
+/**
+ * Libraries
+ */
+require SCAFFOLD_VENDOR_DIR . '/gizburdt/cuztom/cuztom.php';
 
 /**
  * All scaffold filters
