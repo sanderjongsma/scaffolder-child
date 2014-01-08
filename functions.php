@@ -35,7 +35,7 @@ function scaffold_child_init()
 {
 }
 endif;
-add_action( 'scaffold_child_init', 'scaffold_child_init' );
+add_action( 'scaffold_child_hook', 'scaffold_child_init' );
 
 /**
  * Setup fired at this location (not after the parent init)
