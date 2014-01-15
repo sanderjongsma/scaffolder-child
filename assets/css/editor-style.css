@@ -1,5 +1,5 @@
 /*
-Theme Name: Twenty Thirteen
+Theme Name: Scaffold
 Description: Used to style the TinyMCE editor.
 */
 
@@ -27,7 +27,6 @@ Description: Used to style the TinyMCE editor.
 
 html .mceContentBody {
 	font-size: 80%;
-	max-width: 604px;
 }
 
 body {
