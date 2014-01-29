@@ -236,12 +236,12 @@ sub {
  */
 
 a {
-	color: #ca3c08;
+	color: #2ea2cc;
 	text-decoration: none;
 }
 
 a:visited {
-	color: #ac0404;
+	color: #0074a2;
 }
 
 a:focus {
@@ -250,7 +250,7 @@ a:focus {
 
 a:active,
 a:hover {
-	color: #ea9629;
+	color: #0074a2;
 	outline: 0;
 }
 
