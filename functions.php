@@ -23,7 +23,7 @@ if( ! defined( 'SCAFFOLD_VENDOR_DIR' ) ) {
 }
 
 
-if( ! function_exists( 'scaffold_child_init' ) ) :
+if( ! function_exists( 'scaffold_child_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -31,11 +31,11 @@ if( ! function_exists( 'scaffold_child_init' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function scaffold_child_init()
+function scaffold_child_setup()
 {
 }
 endif;
-add_action( 'scaffold_child_hook', 'scaffold_child_init' );
+add_action( 'scaffold_child_init', 'scaffold_child_setup' );
 
 /**
  * Enqueue scripts and styles.
