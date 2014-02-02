@@ -33,6 +33,12 @@ if( ! function_exists( 'scaffold_child_setup' ) ) :
  */
 function scaffold_child_setup()
 {
+	// Theme support
+
+	// Image sizes	
+	// add_image_size( 'name', width, height, true );
+
+	// Menus
 }
 endif;
 add_action( 'scaffold_child_init', 'scaffold_child_setup' );
