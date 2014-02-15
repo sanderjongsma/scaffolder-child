@@ -1,5 +1,8 @@
 <?php
 
+// Block direct access
+if( ! defined( 'ABSPATH' ) ) exit;
+
 class Scaffold_Customizer
 {
 	function __construct()

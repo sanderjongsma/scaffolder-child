@@ -49,12 +49,15 @@ add_action( 'scaffold_child_init', 'scaffold_child_setup' );
 function scaffold_child_styles_scripts()
 {
 	// Styles
-	add_action( 'wp_enqueue_scripts', 	'scaffold_child_register_styles' );
-	add_action( 'wp_enqueue_scripts', 	'scaffold_child_enqueue_styles' );
+	add_action( 'wp_enqueue_scripts', 	'scaffold_child_register_styles', 20, 2 );
+	add_action( 'wp_enqueue_scripts', 	'scaffold_child_enqueue_styles', 20, 2 );
 
 	// Scripts
-	add_action( 'wp_enqueue_scripts', 	'scaffold_child_register_scripts' );
-	add_action( 'wp_enqueue_scripts', 	'scaffold_child_enqueue_scripts' );
+	add_action( 'wp_enqueue_scripts', 	'scaffold_child_register_scripts', 20, 2 );
+	add_action( 'wp_enqueue_scripts', 	'scaffold_child_enqueue_scripts', 20, 2 );
+
+	// Dequeue
+	add_action( 'wp_print_scripts', 	'scaffold_child_dequeue_scripts', 30, 2 );
 }
 add_action( 'init', 'scaffold_child_styles_scripts' );
 
@@ -104,6 +107,14 @@ function scaffold_child_localize_scripts()
 		'home_url'			=> get_home_url(),
 		'ajax_url'			=> admin_url( 'admin-ajax.php' )
 	) );
+}
+
+/**
+ * Dequeue assets
+ */
+function scaffold_child_dequeue_scripts() {
+    // wp_dequeue_script( 'handle' );
+    // wp_deregister_script( 'handle' );
 }
 
 /**
