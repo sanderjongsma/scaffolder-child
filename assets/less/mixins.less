@@ -1,1 +1,56 @@
+// 
+// Glyphicons
+.make-glyphicon(@content) {
+	position: relative;
+	top: 1px;
+	display: inline-block;
+	font-family: 'Glyphicons Halflings';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	&:before { content: @content; }
+}
+
+// Border radius
+.border-radius(@radius: @border-radius-base) {
+	.border-top-radius(@radius);
+	.border-bottom-radius(@radius);
+	border-radius: @radius;
+}
+
+// Box shadow
+.box-shadow(@shadow) {
+	-webkit-box-shadow: @shadow;
+	box-shadow: @shadow;
+}
+
+// Smooth hover fade
+.hover-fade(@duration: @smooth-hover-duration) {
+	transition-property: background;
+	transition-duration: @duration;
+	transition-timing-function: linear;
+}
+
+// Horizontal gradient
+.horizontal-gradient(@start-color, @end-color) {
+	background: @start-color;
+	background: -moz-linear-gradient(left, @start-color 0%, #2989d8 50%, #207cca 51%, @end-color 100%); 
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,@start-color), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,@end-color));
+	background: -webkit-linear-gradient(left, @start-color 0%,#2989d8 50%,#207cca 51%,@end-color 100%); 
+	background: -o-linear-gradient(left, @start-color 0%,#2989d8 50%,#207cca 51%,@end-color 100%); 
+	background: -ms-linear-gradient(left, @start-color 0%,#2989d8 50%,#207cca 51%,@end-color 100%); 
+	background: linear-gradient(to right, @start-color 0%,#2989d8 50%,#207cca 51%,@end-color 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@start-color, endColorstr=@end-color,GradientType=1 ); /* IE6-9 */
+}
+
+// Vertical gradient
+.vertical-gradient(@start-color, @end-color) {
+	background: @start-color;
+	background: -moz-linear-gradient(top, @start-color 0%, #2989d8 50%, #207cca 51%, @end-color 100%); 
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start-color), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,@end-color)); 
+	background: -webkit-linear-gradient(top, @start-color 0%,#2989d8 50%,#207cca 51%,@end-color 100%); 
+	background: -o-linear-gradient(top, @start-color 0%,#2989d8 50%,#207cca 51%,@end-color 100%); 
+	background: -ms-linear-gradient(top, @start-color 0%,#2989d8 50%,#207cca 51%,@end-color 100%); 
+	background: linear-gradient(to bottom, @start-color 0%,#2989d8 50%,#207cca 51%,@end-color 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@start-color, endColorstr=@end-color,GradientType=0 ); /* IE6-9 */
+}
 
