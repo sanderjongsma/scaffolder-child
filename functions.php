@@ -22,6 +22,15 @@ if( ! defined( 'SCAFFOLD_VENDOR_DIR' ) ) {
 	define( 'SCAFFOLD_VENDOR_DIR', WP_CONTENT_DIR . '/vendor' ); // get_template_directory()
 }
 
+// Cuztom dir
+if( ! defined( 'CUZTOM_DIR' ) ) {
+	define( 'CUZTOM_DIR', SCAFFOLD_VENDOR_DIR . '/gizburdt/cuztom/' ); // get_template_directory()
+}
+
+// Cuztom url
+if( ! defined( 'CUZTOM_URL' ) ) {
+	define( 'CUZTOM_URL', SCAFFOLD_VENDOR_URL . '/gizburdt/cuztom/' ); // get_stylesheet_directory_uri()
+}
 
 if( ! function_exists( 'scaffold_child_setup' ) ) :
 /**
