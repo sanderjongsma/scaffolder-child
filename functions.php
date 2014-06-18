@@ -77,8 +77,8 @@ add_action( 'init', 'scaffold_child_styles_scripts' );
  */
 function scaffold_child_deregister_styles()
 {
-	wp_deregister_style( 'jquery-bxslider' );
-	wp_deregister_style( 'jquery-fancybox' );
+	wp_dequeue_style( 'jquery-bxslider' );
+	wp_dequeue_style( 'jquery-fancybox' );
 }
 
 /**
@@ -100,9 +100,9 @@ function scaffold_child_enqueue_styles()
  */
 function scaffold_child_deregister_scripts()
 {
-	wp_deregister_script( 'jquery-caroufredsel' );
-	wp_deregister_script( 'jquery-bxslider' );
-	wp_deregister_script( 'jquery-fancybox' );
+	wp_dequeue_script( 'jquery-caroufredsel' );
+	wp_dequeue_script( 'jquery-bxslider' );
+	wp_dequeue_script( 'jquery-fancybox' );
 }
 
 /**
