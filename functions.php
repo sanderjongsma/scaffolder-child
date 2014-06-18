@@ -58,10 +58,12 @@ add_action( 'scaffold_child_init', 'scaffold_child_setup' );
 function scaffold_child_styles_scripts()
 {
 	// Styles
+	add_action( 'wp_enqueue_scripts', 	'scaffold_child_deregister_styles', 20, 2 );
 	add_action( 'wp_enqueue_scripts', 	'scaffold_child_register_styles', 20, 2 );
 	add_action( 'wp_enqueue_scripts', 	'scaffold_child_enqueue_styles', 20, 2 );
 
 	// Scripts
+	add_action( 'wp_enqueue_scripts', 	'scaffold_child_deregister_scripts', 20, 2 );
 	add_action( 'wp_enqueue_scripts', 	'scaffold_child_register_scripts', 20, 2 );
 	add_action( 'wp_enqueue_scripts', 	'scaffold_child_enqueue_scripts', 20, 2 );
 
@@ -69,6 +71,15 @@ function scaffold_child_styles_scripts()
 	add_action( 'wp_print_scripts', 	'scaffold_child_dequeue_scripts', 30, 2 );
 }
 add_action( 'init', 'scaffold_child_styles_scripts' );
+
+/**
+ * Deregister styles.
+ */
+function scaffold_child_deregister_styles()
+{
+	wp_deregister_style( 'jquery-bxslider' );
+	wp_deregister_style( 'jquery-fancybox' );
+}
 
 /**
  * Register styles.
@@ -82,6 +93,16 @@ function scaffold_child_register_styles()
  */
 function scaffold_child_enqueue_styles()
 {
+}
+
+/**
+ * Register scripts.
+ */
+function scaffold_child_deregister_scripts()
+{
+	wp_deregister_script( 'jquery-caroufredsel' );
+	wp_deregister_script( 'jquery-bxslider' );
+	wp_deregister_script( 'jquery-fancybox' );
 }
 
 /**
