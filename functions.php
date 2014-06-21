@@ -170,6 +170,11 @@ require get_stylesheet_directory() . '/includes/customizer.php';
 require get_stylesheet_directory() . '/includes/template.php';
 
 /**
+ * Widgets / sidebars
+ */
+require get_stylesheet_directory() . '/includes/widgets.php';
+
+/**
  * Content types; Post types, Meta boxes
  */
 require get_stylesheet_directory() . '/includes/content-types.php';
