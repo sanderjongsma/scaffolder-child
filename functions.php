@@ -66,9 +66,6 @@ function scaffold_child_assets()
 	add_action( 'wp_enqueue_scripts', 	'scaffold_child_dequeue_scripts', 20, 2 );
 	add_action( 'wp_enqueue_scripts', 	'scaffold_child_register_scripts', 20, 2 );
 	add_action( 'wp_enqueue_scripts', 	'scaffold_child_enqueue_scripts', 20, 2 );
-
-	// Dequeue
-	add_action( 'wp_print_scripts', 	'scaffold_child_dequeue_scripts', 30, 2 );
 }
 add_action( 'init', 'scaffold_child_assets' );
 
