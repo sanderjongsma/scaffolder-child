@@ -4,8 +4,10 @@
 if( ! defined( 'ABSPATH' ) ) exit;
 
 // Error reporting
-error_reporting( E_ALL );
-ini_set( 'display_errors', 1 );
+if( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+	error_reporting( E_ALL );
+	ini_set( 'display_errors', 1 );
+}
 
 // Set content_width
 if ( ! isset( $content_width ) ) {
