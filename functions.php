@@ -50,6 +50,9 @@ function scaffold_child_setup()
 	// add_image_size( 'name', width, height, true );
 
 	// Menus
+	// register_nav_menus( array(
+	// 	'extra'	=> __( 'Extra', 'scaffold' ),
+	// ) );
 }
 endif;
 add_action( 'scaffold_child_init', 'scaffold_child_setup' );
