@@ -1,5 +1,8 @@
 {
     "name": 		"gizburdt/scaffold-child",
     "type":        	"wordpress-theme",
-    "description": 	"Scaffold child theme"
+    "description": 	"Scaffold child theme",
+    "require": {
+        "composer/installers": "~1.0"
+    }
 }
