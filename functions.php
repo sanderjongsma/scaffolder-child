@@ -102,9 +102,10 @@ function scaffold_child_enqueue_styles()
  */
 function scaffold_child_dequeue_scripts()
 {
-	wp_dequeue_script( 'jquery-caroufredsel' );
+    wp_dequeue_script( 'enquire' );
 	wp_dequeue_script( 'jquery-bxslider' );
 	wp_dequeue_script( 'jquery-fancybox' );
+    wp_dequeue_script( 'jquery-fitvids' );
 }
 
 /**
