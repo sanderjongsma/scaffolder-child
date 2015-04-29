@@ -45,6 +45,7 @@ if( ! function_exists( 'scaffold_child_setup' ) ) :
 function scaffold_child_setup()
 {
 	// Theme support
+    // add_theme_support( 'post-formats', array( /* 'aside', 'link', 'gallery', 'status', 'quote', 'image' */ ) );
 
 	// Image sizes	
 	// add_image_size( 'name', width, height, true );

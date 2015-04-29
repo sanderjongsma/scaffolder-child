@@ -3,6 +3,9 @@
 // Block direct access
 if( ! defined( 'ABSPATH' ) ) exit;
 
+/**
+ * Include files (widgets)
+ */
 require get_stylesheet_directory() . '/includes/widgets/widget-scaffold.php';
 
 /**
