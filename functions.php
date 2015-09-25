@@ -34,7 +34,7 @@ if( ! defined( 'CUZTOM_URL' ) ) {
     define( 'CUZTOM_URL', SCAFFOLD_VENDOR_URL . '/gizburdt/cuztom/' ); // get_stylesheet_directory_uri()
 }
 
-if( ! function_exists( 'scaffold_child_setup' ) ) :
+if( ! function_exists( 'scaffolder_child_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -42,7 +42,7 @@ if( ! function_exists( 'scaffold_child_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function scaffold_child_setup()
+function scaffolder_child_setup()
 {
     // Theme support
     // add_theme_support( 'post-formats', array( /* 'aside', 'link', 'gallery', 'status', 'quote', 'image' */ ) );
@@ -56,29 +56,29 @@ function scaffold_child_setup()
     // ) );
 }
 endif;
-add_action( 'scaffold_child_init', 'scaffold_child_setup' );
+add_action( 'scaffolder_child_init', 'scaffolder_child_setup' );
 
 /**
  * Enqueue scripts and styles.
  */
-function scaffold_child_assets()
+function scaffolder_child_assets()
 {
     // Styles
-    add_action( 'wp_enqueue_scripts',   'scaffold_child_dequeue_styles', 20, 2 );
-    add_action( 'wp_enqueue_scripts',   'scaffold_child_register_styles', 20, 2 );
-    add_action( 'wp_enqueue_scripts',   'scaffold_child_enqueue_styles', 20, 2 );
+    add_action( 'wp_enqueue_scripts',   'scaffolder_child_dequeue_styles', 20, 2 );
+    add_action( 'wp_enqueue_scripts',   'scaffolder_child_register_styles', 20, 2 );
+    add_action( 'wp_enqueue_scripts',   'scaffolder_child_enqueue_styles', 20, 2 );
 
     // Scripts
-    add_action( 'wp_enqueue_scripts',   'scaffold_child_dequeue_scripts', 20, 2 );
-    add_action( 'wp_enqueue_scripts',   'scaffold_child_register_scripts', 20, 2 );
-    add_action( 'wp_enqueue_scripts',   'scaffold_child_enqueue_scripts', 20, 2 );
+    add_action( 'wp_enqueue_scripts',   'scaffolder_child_dequeue_scripts', 20, 2 );
+    add_action( 'wp_enqueue_scripts',   'scaffolder_child_register_scripts', 20, 2 );
+    add_action( 'wp_enqueue_scripts',   'scaffolder_child_enqueue_scripts', 20, 2 );
 }
-add_action( 'init', 'scaffold_child_assets' );
+add_action( 'init', 'scaffolder_child_assets' );
 
 /**
  * Dequeue styles.
  */
-function scaffold_child_dequeue_styles()
+function scaffolder_child_dequeue_styles()
 {
     wp_dequeue_style( 'jquery-bxslider' );
     wp_dequeue_style( 'jquery-fancybox' );
@@ -87,21 +87,21 @@ function scaffold_child_dequeue_styles()
 /**
  * Register styles.
  */
-function scaffold_child_register_styles()
+function scaffolder_child_register_styles()
 {
 }
 
 /**
  * Enqueue styles.
  */
-function scaffold_child_enqueue_styles()
+function scaffolder_child_enqueue_styles()
 {
 }
 
 /**
  * Dequeue scripts.
  */
-function scaffold_child_dequeue_scripts()
+function scaffolder_child_dequeue_scripts()
 {
     wp_dequeue_script( 'enquire' );
     wp_dequeue_script( 'jquery-bxslider' );
@@ -112,7 +112,7 @@ function scaffold_child_dequeue_scripts()
 /**
  * Register scripts
  */
-function scaffold_child_register_scripts()
+function scaffolder_child_register_scripts()
 {
     // Theme
     wp_register_script( 'functions', get_stylesheet_directory_uri() . '/assets/js/functions.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-tabs' ), '', true);
@@ -121,19 +121,19 @@ function scaffold_child_register_scripts()
 /**
  * Enqueue scripts
  */
-function scaffold_child_enqueue_scripts()
+function scaffolder_child_enqueue_scripts()
 {
     // Theme
     wp_enqueue_script( 'functions' );
 
     // Localize
-    scaffold_child_localize_scripts();
+    scaffolder_child_localize_scripts();
 }
 
 /**
  * Localize scripts.
  */
-function scaffold_child_localize_scripts()
+function scaffolder_child_localize_scripts()
 {
     wp_localize_script( 'functions', 'Scaffold', array(
         'template_uri'      => get_template_directory_uri(),

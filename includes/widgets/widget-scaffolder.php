@@ -1,6 +1,6 @@
 <?php
 
-class Scaffold_Widget extends WP_Widget
+class Scaffolder_Widget extends WP_Widget
 {
     /**
      * Sets up the widgets name etc
