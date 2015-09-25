@@ -5,7 +5,7 @@
         "bootstrap-sass":       "3.*",
         "font-awesome-sass":    "4.*",
         "html5shiv":            "3.*",
-        "modernizr":            "3.*",
+        "modernizr":            "2.*",
         "respond":              "1.*",
         "enquire":              "2.*",
         "bxslider-4":           "4.*",

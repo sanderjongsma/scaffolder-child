@@ -15,25 +15,11 @@ if ( ! isset( $content_width ) ) {
 }
 
 // Assets/vendor url
-if( ! defined( 'SCAFFOLD_VENDOR_URL' ) ) {
-    define( 'SCAFFOLD_VENDO2R_URL', WP_CONTENT_URL . '/vendor' ); // get_stylesheet_directory_uri()
+if( ! defined( 'SCAFFOLDER_BOWER_URL' ) ) {
+    define( 'SCAFFOLDER_BOWER_URL', get_stylesheet_directory_uri() . '/assets/vendor/' );
 }
 
-// Assets/vendor dir
-if( ! defined( 'SCAFFOLD_VENDOR_DIR' ) ) {
-    define( 'SCAFFOLD_VENDOR_DIR', WP_CONTENT_DIR . '/vendor' ); // get_template_directory()
-}
-
-// Cuztom dir
-if( ! defined( 'CUZTOM_DIR' ) ) {
-    define( 'CUZTOM_DIR', SCAFFOLD_VENDOR_DIR . '/gizburdt/cuztom/' ); // get_template_directory()
-}
-
-// Cuztom url
-if( ! defined( 'CUZTOM_URL' ) ) {
-    define( 'CUZTOM_URL', SCAFFOLD_VENDOR_URL . '/gizburdt/cuztom/' ); // get_stylesheet_directory_uri()
-}
-
+// Scaffold setup
 if( ! function_exists( 'scaffolder_child_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -146,7 +132,7 @@ function scaffolder_child_localize_scripts()
 /**
  * Libraries
  */
-require SCAFFOLD_VENDOR_DIR . '/gizburdt/cuztom/cuztom.php';
+require get_stylesheet_directory() . '/includes/cuztom.php';
 
 /**
  * All scaffold filters

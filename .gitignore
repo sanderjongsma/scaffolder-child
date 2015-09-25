@@ -2,9 +2,9 @@
 .DS_Store
 .log
 /*.zip
+/*.tar.gz
 
 # Composer
-composer.lock
 vendor/
 
 # Node
@@ -20,4 +20,3 @@ codekit-config.json
 *.idea
 .idea
 .idea/*
-*.tar.gz
