@@ -1,7 +1,7 @@
 jQuery.noConflict();
 
 (function($) {
-	
-	// Javascript
-	
+
+    // Javascript
+
 })(jQuery);

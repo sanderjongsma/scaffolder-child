@@ -1,0 +1,47 @@
+//
+// Imports
+// --------------------------------------------------
+
+// Scaffold
+@import "../scaffolder/style.scss";
+
+// Base
+@import "assets/scss/mixins.scss";
+@import "assets/scss/variables/project.scss";
+@import "assets/scss/variables/bootstrap.scss";
+@import "assets/scss/variables/font-awesome.scss";
+
+// Components
+@import "assets/scss/components/header.scss";
+@import "assets/scss/components/footer.scss";
+@import "assets/scss/components/navigation.scss";
+@import "assets/scss/components/content.scss";
+
+// Modules
+@import "assets/scss/modules/slider.scss";
+
+// Pages
+@import "assets/scss/pages/homepage.scss";
+@import "assets/scss/pages/contact.scss";
+
+// Vendor
+@import "assets/vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "assets/vendor/font-awesome-sass/assets/stylesheets/font-awesome.scss";
+
+
+// Base
+// --------------------------------------------------
+
+html,
+body{}
+
+
+// Structure
+// --------------------------------------------------
+
+.site{}
+.site-header{}
+.site-footer{}
+.site-navigation{}
+.site-content{}
+.content-wrap{}

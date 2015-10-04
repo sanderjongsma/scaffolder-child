@@ -2,7 +2,16 @@
     "name": "gizburdt/scaffolder-child",
     "type": "wordpress-theme",
     "description": "Scaffolder child theme",
+    "authors": [
+        {
+            "name":         "Gijs Jorissen",
+            "email":        "lol@gizburdt.com",
+            "homepage":     "http://gizburdt.com"
+        }
+    ],
     "require": {
-        "composer/installers": "~1.0"
+        "php":                           ">=5.3.0",
+        "composer/installers":           "~1.0",
+        "gizburdt/cuztom":               "2.9.*"
     }
 }

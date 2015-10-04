@@ -6,17 +6,17 @@ if( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Excerpt length
  */
-function scaffold_excerpt_length( $length ) 
+function scaffolder_excerpt_length( $length )
 {
     return 55;
 }
-add_filter( 'excerpt_length', 'scaffold_excerpt_length' );
+add_filter( 'excerpt_length', 'scaffolder_excerpt_length' );
 
 /**
  * Exceprt more link
  */
-function scaffold_excerpt_more( $more ) 
+function scaffolder_excerpt_more( $more )
 {
     return ' [...]';
 }
-add_filter( 'excerpt_more', 'scaffold_excerpt_more' );
+add_filter( 'excerpt_more', 'scaffolder_excerpt_more' );
