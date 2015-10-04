@@ -16,8 +16,8 @@ gulp.task('scripts', function() {
 
 // Watch
 gulp.task('watch', function() {
-    gulp.watch('assets/scss/*.scss', ['styles']);
-    gulp.watch('assets/js/*.js', ['scripts']);
+    gulp.watch('assets/scss/**/*.scss', ['styles']);
+    gulp.watch('assets/js/**/*.js', ['scripts']);
 });
 
 // Default
