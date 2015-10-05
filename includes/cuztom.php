@@ -14,4 +14,6 @@ if( ! defined( 'CUZTOM_URL' ) ) {
 }
 
 // Require
-require CUZTOM_DIR . 'cuztom.php';
+if(file_exists(CUZTOM_DIR . 'cuztom.php')) {
+    require CUZTOM_DIR . 'cuztom.php';
+}
