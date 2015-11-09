@@ -14,6 +14,11 @@ if ( ! isset( $content_width ) ) {
     $content_width = 640;
 }
 
+// Environment
+if( ! defined( 'SCAFFOLDER_ENV' ) ) {
+    define( 'SCAFFOLDER_ENV', 'production' );
+}
+
 // Assets/vendor url
 if( ! defined( 'SCAFFOLDER_BOWER_URL' ) ) {
     define( 'SCAFFOLDER_BOWER_URL', get_stylesheet_directory_uri() . '/assets/vendor/' );
