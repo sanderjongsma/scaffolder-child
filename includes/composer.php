@@ -5,7 +5,7 @@ if( ! defined( 'ABSPATH' ) ) exit;
 
 // Cuztom url
 if( ! defined( 'CUZTOM_URL' ) ) {
-    // define( 'CUZTOM_URL', get_stylesheet_directory_uri() . '/vendor/gizburdt/cuztom' );
+    define( 'CUZTOM_URL', get_stylesheet_directory_uri() . '/vendor/gizburdt/cuztom' );
 }
 
 // Require
