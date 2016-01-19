@@ -142,7 +142,7 @@ function scaffolder_child_localize_scripts()
 /**
  * Libraries
  */
-require get_stylesheet_directory() . '/includes/cuztom.php';
+require get_stylesheet_directory() . '/includes/composer.php';
 
 /**
  * All scaffold filters
