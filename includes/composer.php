@@ -10,5 +10,5 @@ if( ! defined( 'CUZTOM_URL' ) ) {
 
 // Require
 if(file_exists(get_stylesheet_directory() . '/vendor/autoload.php')) {
-    require get_stylesheet_directory() . '/vendor/autoload.php');
+    require_once get_stylesheet_directory() . '/vendor/autoload.php';
 }
