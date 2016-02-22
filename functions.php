@@ -48,7 +48,7 @@ function scaffolder_child_setup()
 
     // Menus
     // register_nav_menus( array(
-    //  'extra' => __( 'Extra', 'scaffold' ),
+    //     'extra' => __( 'Extra', 'scaffold' ),
     // ) );
 }
 endif;
@@ -152,6 +152,11 @@ function scaffolder_child_localize_scripts()
         'ajax_url'          => admin_url( 'admin-ajax.php' )
     ) );
 }
+
+/**
+ * Allow automatic updates
+ */
+add_filter( 'automatic_updates_is_vcs_checkout', '__return_false', 1 );
 
 /**
  * Libraries
