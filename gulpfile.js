@@ -23,6 +23,7 @@ var jsFiles = [
     'assets/vendor/bxslider-4/dist/jquery.bxslider.min.js',
     'assets/vendor/fancybox/source/jquery.fancybox.pack.js',
     'assets/vendor/fitvids/jquery.fitvids.js',
+    'assets/js/functions.js',
 ];
 
 // Styles
