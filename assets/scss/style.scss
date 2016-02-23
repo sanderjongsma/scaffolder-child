@@ -3,30 +3,30 @@
 // --------------------------------------------------
 
 // Scaffold
-@import "../scaffolder/style.scss";
+@import "../scaffolder/assets/scss/style.scss";
 
 // Base
-@import "assets/scss/mixins.scss";
-@import "assets/scss/variables/project.scss";
-@import "assets/scss/variables/bootstrap.scss";
-@import "assets/scss/variables/font-awesome.scss";
+@import "mixins.scss";
+@import "variables/project.scss";
+@import "variables/bootstrap.scss";
+@import "variables/font-awesome.scss";
 
 // Vendor
-@import "assets/vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "assets/vendor/font-awesome-sass/assets/stylesheets/font-awesome.scss";
+@import "../vendor/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../vendor/font-awesome-sass/assets/stylesheets/font-awesome.scss";
 
 // Components
-@import "assets/scss/components/header.scss";
-@import "assets/scss/components/footer.scss";
-@import "assets/scss/components/navigation.scss";
-@import "assets/scss/components/content.scss";
+@import "components/header.scss";
+@import "components/footer.scss";
+@import "components/navigation.scss";
+@import "components/content.scss";
 
 // Modules
-@import "assets/scss/modules/slider.scss";
+@import "modules/slider.scss";
 
 // Pages
-@import "assets/scss/pages/homepage.scss";
-@import "assets/scss/pages/contact.scss";
+@import "pages/homepage.scss";
+@import "pages/contact.scss";
 
 
 // Base
