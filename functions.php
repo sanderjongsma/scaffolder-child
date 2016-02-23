@@ -21,7 +21,7 @@ if( ! defined( 'SCAFFOLDER_ENV' ) ) {
 
 // Assets/vendor url
 if( ! defined( 'SCAFFOLDER_BOWER_URL' ) ) {
-    define( 'SCAFFOLDER_BOWER_URL', get_stylesheet_directory_uri() . '/assets/vendor/' );
+    define( 'SCAFFOLDER_BOWER_URL', get_stylesheet_directory_uri() . '/assets/vendor' );
 }
 
 // Build url
@@ -48,7 +48,7 @@ function scaffolder_child_setup()
 
     // Menus
     // register_nav_menus( array(
-    //  'extra' => __( 'Extra', 'scaffold' ),
+    //     'extra' => __( 'Extra', 'scaffold' ),
     // ) );
 }
 endif;
@@ -85,6 +85,9 @@ function scaffolder_child_dequeue_styles()
  */
 function scaffolder_child_register_styles()
 {
+    if( is_scaffolder_env('local') ) {
+        // Assets
+    }
 }
 
 /**
@@ -92,6 +95,9 @@ function scaffolder_child_register_styles()
  */
 function scaffolder_child_enqueue_styles()
 {
+    if( is_scaffolder_env('local') ) {
+        // Assets
+    }
 }
 
 /**
@@ -110,6 +116,10 @@ function scaffolder_child_dequeue_scripts()
  */
 function scaffolder_child_register_scripts()
 {
+    if( is_scaffolder_env('local') ) {
+        // Assets
+    }
+
     // Theme
     wp_register_script( 'functions', SCAFFOLDER_BUILD_URL . '/js/functions.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-tabs' ), '', true);
 }
@@ -119,6 +129,10 @@ function scaffolder_child_register_scripts()
  */
 function scaffolder_child_enqueue_scripts()
 {
+    if( is_scaffolder_env('local') ) {
+        // Assets
+    }
+
     // Theme
     wp_enqueue_script( 'functions' );
 
@@ -138,6 +152,11 @@ function scaffolder_child_localize_scripts()
         'ajax_url'          => admin_url( 'admin-ajax.php' )
     ) );
 }
+
+/**
+ * Allow automatic updates
+ */
+add_filter( 'automatic_updates_is_vcs_checkout', '__return_false', 1 );
 
 /**
  * Libraries
