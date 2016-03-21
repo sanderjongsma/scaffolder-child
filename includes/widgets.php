@@ -1,29 +1,31 @@
 <?php
 
 // Block direct access
-if( ! defined( 'ABSPATH' ) ) exit;
+if (! defined('ABSPATH')) {
+    exit;
+}
 
 /**
- * Include files (widgets)
+ * Include files (widgets).
  */
-require get_stylesheet_directory() . '/includes/widgets/widget-scaffolder.php';
+require get_stylesheet_directory().'/includes/widgets/widget-scaffolder.php';
 
 /**
- * Register widgets
+ * Register widgets.
  */
 function scaffolder_add_widgets()
 {
-    register_widget( 'Scaffolder_Widget' );
+    register_widget('Scaffolder_Widget');
 }
-add_action( 'widgets_init', 'scaffolder_add_widgets' );
+add_action('widgets_init', 'scaffolder_add_widgets');
 
 /**
- * Register sidebars
+ * Register sidebars.
  */
 function scaffolder_add_sidebars()
 {
-    register_sidebar( array(
-        'name'          => __( 'Sidebar', 'scaffold' ),
+    register_sidebar(array(
+        'name'          => __('Sidebar', 'scaffold'),
         'id'            => 'sidebar',
         'description'   => '',
         'class'         => '',
@@ -31,6 +33,6 @@ function scaffolder_add_sidebars()
         'after_widget'  => '</li>',
         'before_title'  => '<h3 class="widgettitle widget-title">',
         'after_title'   => '</h3>'
-    ) );
+    ));
 }
-add_action( 'widgets_init', 'scaffolder_add_sidebars' );
+add_action('widgets_init', 'scaffolder_add_sidebars');
