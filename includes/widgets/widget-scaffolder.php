@@ -39,7 +39,7 @@ class Scaffolder_Widget extends WP_Widget
      */
     public function form($instance)
     {
-        $title = isset($instance['title']) ? esc_attr( $instance['title'] ) : '';
+        $title = isset($instance['title']) ? esc_attr($instance['title']) : '';
 
         ?>
 
