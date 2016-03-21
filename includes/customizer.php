@@ -1,41 +1,43 @@
 <?php
 
 // Block direct access
-if( ! defined( 'ABSPATH' ) ) exit;
+if (! defined('ABSPATH')) {
+    exit;
+}
 
 class Scaffold_Customizer
 {
-    function __construct()
+    public function __construct()
     {
-        add_action( 'customize_register', array( &$this, 'register' ) );
+        add_action('customize_register', array(&$this, 'register'));
     }
 
-    function register( $customize )
+    public function register($customize)
     {
-        $this->add_sections( $customize );
-        $this->add_settings( $customize );
-        $this->add_controls( $customize );
+        $this->add_sections($customize);
+        $this->add_settings($customize);
+        $this->add_controls($customize);
     }
 
-    function add_sections( $customize )
+    public function add_sections($customize)
     {
         // Section
-        $customize->add_section( 'section', array(
-            'title'         => __( 'Section', 'scaffold' ),
+        $customize->add_section('section', array(
+            'title'         => __('Section', 'scaffold'),
             'priority'      => 130
-        ) );
+        ));
     }
 
-    function add_settings( $customize )
+    public function add_settings($customize)
     {
         // Section
-        $customize->add_setting( 'setting' );
+        $customize->add_setting('setting');
     }
 
-    function add_controls( $customize )
+    public function add_controls($customize)
     {
         // Section
-        $customize->add_control( 'setting', array(
+        $customize->add_control('setting', array(
             'section'   => 'section',
             'settings'  => 'setting',
             'label'     => 'Setting',

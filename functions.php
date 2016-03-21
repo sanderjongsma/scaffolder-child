@@ -1,36 +1,38 @@
 <?php
 
 // Block direct access
-if( ! defined( 'ABSPATH' ) ) exit;
+if (! defined('ABSPATH')) {
+    exit;
+}
 
 // Error reporting
-if( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-    error_reporting( E_ALL );
-    ini_set( 'display_errors', 1 );
+if (defined('WP_DEBUG') && WP_DEBUG) {
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 }
 
 // Set content_width
-if ( ! isset( $content_width ) ) {
+if (! isset($content_width)) {
     $content_width = 640;
 }
 
 // Environment
-if( ! defined( 'SCAFFOLDER_ENV' ) ) {
-    define( 'SCAFFOLDER_ENV', 'production' );
+if (! defined('SCAFFOLDER_ENV')) {
+    define('SCAFFOLDER_ENV', 'production');
 }
 
 // Assets/vendor url
-if( ! defined( 'SCAFFOLDER_BOWER_URL' ) ) {
-    define( 'SCAFFOLDER_BOWER_URL', get_stylesheet_directory_uri() . '/assets/vendor' );
+if (! defined('SCAFFOLDER_BOWER_URL')) {
+    define('SCAFFOLDER_BOWER_URL', get_stylesheet_directory_uri().'/assets/vendor');
 }
 
 // Build url
-if( ! defined( 'SCAFFOLDER_BUILD_URL' ) ) {
-    define( 'SCAFFOLDER_BUILD_URL', get_stylesheet_directory_uri() . '/assets/build' );
+if (! defined('SCAFFOLDER_BUILD_URL')) {
+    define('SCAFFOLDER_BUILD_URL', get_stylesheet_directory_uri().'/assets/build');
 }
 
 // Scaffold setup
-if( ! function_exists( 'scaffolder_child_setup' ) ) :
+if (! function_exists('scaffolder_child_setup')) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -52,7 +54,7 @@ function scaffolder_child_setup()
     // ) );
 }
 endif;
-add_action( 'scaffolder_child_init', 'scaffolder_child_setup' );
+add_action('scaffolder_child_init', 'scaffolder_child_setup');
 
 /**
  * Enqueue scripts and styles.
@@ -60,24 +62,24 @@ add_action( 'scaffolder_child_init', 'scaffolder_child_setup' );
 function scaffolder_child_assets()
 {
     // Styles
-    add_action( 'wp_enqueue_scripts',   'scaffolder_child_dequeue_styles', 20, 2 );
-    add_action( 'wp_enqueue_scripts',   'scaffolder_child_register_styles', 20, 2 );
-    add_action( 'wp_enqueue_scripts',   'scaffolder_child_enqueue_styles', 20, 2 );
+    add_action('wp_enqueue_scripts', 'scaffolder_child_dequeue_styles', 20, 2);
+    add_action('wp_enqueue_scripts', 'scaffolder_child_register_styles', 20, 2);
+    add_action('wp_enqueue_scripts', 'scaffolder_child_enqueue_styles', 20, 2);
 
     // Scripts
-    add_action( 'wp_enqueue_scripts',   'scaffolder_child_dequeue_scripts', 20, 2 );
-    add_action( 'wp_enqueue_scripts',   'scaffolder_child_register_scripts', 20, 2 );
-    add_action( 'wp_enqueue_scripts',   'scaffolder_child_enqueue_scripts', 20, 2 );
+    add_action('wp_enqueue_scripts', 'scaffolder_child_dequeue_scripts', 20, 2);
+    add_action('wp_enqueue_scripts', 'scaffolder_child_register_scripts', 20, 2);
+    add_action('wp_enqueue_scripts', 'scaffolder_child_enqueue_scripts', 20, 2);
 }
-add_action( 'init', 'scaffolder_child_assets' );
+add_action('init', 'scaffolder_child_assets');
 
 /**
  * Dequeue styles.
  */
 function scaffolder_child_dequeue_styles()
 {
-    wp_dequeue_style( 'jquery-bxslider' );
-    wp_dequeue_style( 'jquery-fancybox' );
+    wp_dequeue_style('jquery-bxslider');
+    wp_dequeue_style('jquery-fancybox');
 }
 
 /**
@@ -85,7 +87,7 @@ function scaffolder_child_dequeue_styles()
  */
 function scaffolder_child_register_styles()
 {
-    if( is_scaffolder_env('local') ) {
+    if (is_scaffolder_env('local')) {
         // Assets
     }
 }
@@ -95,7 +97,7 @@ function scaffolder_child_register_styles()
  */
 function scaffolder_child_enqueue_styles()
 {
-    if( is_scaffolder_env('local') ) {
+    if (is_scaffolder_env('local')) {
         // Assets
     }
 }
@@ -105,36 +107,36 @@ function scaffolder_child_enqueue_styles()
  */
 function scaffolder_child_dequeue_scripts()
 {
-    wp_dequeue_script( 'enquire' );
-    wp_dequeue_script( 'jquery-bxslider' );
-    wp_dequeue_script( 'jquery-fancybox' );
-    wp_dequeue_script( 'jquery-fitvids' );
+    wp_dequeue_script('enquire');
+    wp_dequeue_script('jquery-bxslider');
+    wp_dequeue_script('jquery-fancybox');
+    wp_dequeue_script('jquery-fitvids');
 }
 
 /**
- * Register scripts
+ * Register scripts.
  */
 function scaffolder_child_register_scripts()
 {
-    if( is_scaffolder_env('local') ) {
+    if (is_scaffolder_env('local')) {
         // Assets
     }
 
     // Theme
-    wp_register_script( 'functions', SCAFFOLDER_BUILD_URL . '/js/functions.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-tabs' ), '', true);
+    wp_register_script('functions', SCAFFOLDER_BUILD_URL.'/js/functions.js', array('jquery', 'jquery-ui-core', 'jquery-ui-tabs'), '', true);
 }
 
 /**
- * Enqueue scripts
+ * Enqueue scripts.
  */
 function scaffolder_child_enqueue_scripts()
 {
-    if( is_scaffolder_env('local') ) {
+    if (is_scaffolder_env('local')) {
         // Assets
     }
 
     // Theme
-    wp_enqueue_script( 'functions' );
+    wp_enqueue_script('functions');
 
     // Localize
     scaffolder_child_localize_scripts();
@@ -145,60 +147,60 @@ function scaffolder_child_enqueue_scripts()
  */
 function scaffolder_child_localize_scripts()
 {
-    wp_localize_script( 'functions', 'Scaffold', array(
+    wp_localize_script('functions', 'Scaffold', array(
         'template_uri'      => get_template_directory_uri(),
         'stylesheet_uri'    => get_stylesheet_directory_uri(),
         'home_url'          => get_home_url(),
-        'ajax_url'          => admin_url( 'admin-ajax.php' )
-    ) );
+        'ajax_url'          => admin_url('admin-ajax.php')
+    ));
 }
 
-/**
+/*
  * Allow automatic updates
  */
-add_filter( 'automatic_updates_is_vcs_checkout', '__return_false', 1 );
+add_filter('automatic_updates_is_vcs_checkout', '__return_false', 1);
 
 /**
- * Libraries
+ * Libraries.
  */
-require get_stylesheet_directory() . '/includes/composer.php';
+require get_stylesheet_directory().'/includes/composer.php';
 
 /**
- * All scaffold filters
+ * All scaffold filters.
  */
-require get_stylesheet_directory() . '/includes/filters.php';
+require get_stylesheet_directory().'/includes/filters.php';
 
 /**
- * All scaffold filters for admin
+ * All scaffold filters for admin.
  */
-require get_stylesheet_directory() . '/includes/filters-admin.php';
+require get_stylesheet_directory().'/includes/filters-admin.php';
 
 /**
- * Helper functions
+ * Helper functions.
  */
-require get_stylesheet_directory() . '/includes/helpers.php';
+require get_stylesheet_directory().'/includes/helpers.php';
 
 /**
- * Customizer
+ * Customizer.
  */
-require get_stylesheet_directory() . '/includes/customizer.php';
+require get_stylesheet_directory().'/includes/customizer.php';
 
 /**
- * Template additions / changes
+ * Template additions / changes.
  */
-require get_stylesheet_directory() . '/includes/template.php';
+require get_stylesheet_directory().'/includes/template.php';
 
 /**
- * Widgets / sidebars
+ * Widgets / sidebars.
  */
-require get_stylesheet_directory() . '/includes/widgets.php';
+require get_stylesheet_directory().'/includes/widgets.php';
 
 /**
- * Content types; Post types, Meta boxes
+ * Content types; Post types, Meta boxes.
  */
-require get_stylesheet_directory() . '/includes/content-types.php';
+require get_stylesheet_directory().'/includes/content-types.php';
 
 /**
- * Shortcodes
+ * Shortcodes.
  */
-require get_stylesheet_directory() . '/includes/shortcodes.php';
+require get_stylesheet_directory().'/includes/shortcodes.php';
