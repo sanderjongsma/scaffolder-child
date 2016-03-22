@@ -15,32 +15,17 @@ if(gutil.env.local === true) {
     isLocal = true;
 }
 
-// CSS
-var cssFiles = [
-    'assets/vendor/fancybox/source/jquery.fancybox.css',
-    'assets/vendor/bxslider-4/dist/jquery.bxslider.css',
-];
-
-// SCSS
-var scssFiles = [
-    'assets/scss/style.scss'
-];
-
-// JS
-var jsFiles = [
-    'assets/vendor/bootstrap-sass/assets/javascripts/bootstrap.min.js',
-    'assets/vendor/html5shiv/dist/html5shiv.min.js',
-    'assets/vendor/modernizr/modernizr.js',
-    'assets/vendor/respond/dest/respond.min.js',
-    'assets/vendor/enquire/dist/enquire.min.js',
-    'assets/vendor/bxslider-4/dist/jquery.bxslider.min.js',
-    'assets/vendor/fancybox/source/jquery.fancybox.pack.js',
-    'assets/vendor/fitvids/jquery.fitvids.js',
-    'assets/js/functions.js',
-];
-
 // Styles
 gulp.task('styles', function() {
+    var cssFiles = [
+        'assets/vendor/fancybox/source/jquery.fancybox.css',
+        'assets/vendor/bxslider-4/dist/jquery.bxslider.css',
+    ];
+
+    var scssFiles = [
+        'assets/scss/style.scss'
+    ];
+
     var file = isLocal
         ? gulp.src(['assets/scss/style.scss'])
         : merge( gulp.src(cssFiles), gulp.src(scssFiles) );
@@ -54,6 +39,18 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
+    var jsFiles = [
+        'assets/vendor/bootstrap-sass/assets/javascripts/bootstrap.min.js',
+        'assets/vendor/html5shiv/dist/html5shiv.min.js',
+        'assets/vendor/modernizr/modernizr.js',
+        'assets/vendor/respond/dest/respond.min.js',
+        'assets/vendor/enquire/dist/enquire.min.js',
+        'assets/vendor/bxslider-4/dist/jquery.bxslider.min.js',
+        'assets/vendor/fancybox/source/jquery.fancybox.pack.js',
+        'assets/vendor/fitvids/jquery.fitvids.js',
+        'assets/js/functions.js',
+    ];
+
     var file = isLocal
         ? ['assets/js/functions.js']
         : jsFiles;
