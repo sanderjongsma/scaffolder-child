@@ -25,7 +25,7 @@ add_action('widgets_init', 'scaffolder_add_widgets');
 function scaffolder_add_sidebars()
 {
     register_sidebar(array(
-        'name'          => __('Sidebar', 'scaffold'),
+        'name'          => __('Sidebar', 'scaffolder'),
         'id'            => 'sidebar',
         'description'   => '',
         'class'         => '',
