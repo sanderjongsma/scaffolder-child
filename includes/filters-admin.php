@@ -1,7 +1,11 @@
 <?php
 
 // Block direct access
-if( ! defined( 'ABSPATH' ) ) exit;
+if (! defined('ABSPATH')) {
+    exit;
+}
 
 // Only in admin
-if( ! is_admin() ) return;
+if (! is_admin()) {
+    return;
+}
