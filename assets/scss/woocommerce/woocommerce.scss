@@ -1,0 +1,17 @@
+//
+// Woocommerce
+// --------------------------------------------------
+
+.woocommerce{
+
+    // Modules
+    @import "modules/grid.scss";
+    @import "modules/forms.scss";
+    @import "modules/buttons.scss";
+
+    // Pages
+    @import "pages/product.scss";
+
+}
+
+.clear{ clear: both; }

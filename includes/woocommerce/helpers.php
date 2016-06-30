@@ -49,9 +49,5 @@ function is_woo($only = array())
  */
 function is_woo_page($page)
 {
-    if(get_the_ID() == get_option($page, 0)) {
-        return true;
-    }
-
-    return false;
+    return get_the_ID() == get_option($page, 0);
 }

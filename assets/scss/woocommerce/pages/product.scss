@@ -1,0 +1,16 @@
+//
+// Product
+// --------------------------------------------------
+
+div.product{
+    @include make-row();
+
+    div.images,
+    div.summary{
+        @include make-md-column(6);
+    }
+
+    .woocommerce-tabs{
+        clear: both;
+    }
+}

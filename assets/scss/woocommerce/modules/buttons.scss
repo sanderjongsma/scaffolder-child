@@ -1,0 +1,12 @@
+//
+// Buttons
+// --------------------------------------------------
+
+input.button{
+    @extend .btn;
+    @extend .btn-default;
+}
+
+input.button.alt{
+    @extend .btn-primary;
+}

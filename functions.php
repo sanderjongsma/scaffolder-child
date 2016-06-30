@@ -208,4 +208,4 @@ require get_stylesheet_directory().'/includes/shortcodes.php';
 /**
  * Woocommerce.
  */
-// require get_stylesheet_directory().'/includes/woocommerce.php';
+require get_stylesheet_directory().'/includes/woocommerce.php';

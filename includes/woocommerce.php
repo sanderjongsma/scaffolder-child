@@ -19,8 +19,8 @@ add_action('after_setup_theme', 'woocommerce_support');
  */
 function woo_dequeue_styles($styles)
 {
-    unset($styles['woocommerce-general']);
     unset($styles['woocommerce-layout']);
+    unset($styles['woocommerce-general']);
     unset($styles['woocommerce-smallscreen']);
 
     return $styles;

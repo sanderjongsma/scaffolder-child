@@ -1,0 +1,46 @@
+//
+// Forms
+// --------------------------------------------------
+
+form{
+    .form-row{
+        @extend .form-group;
+        margin-bottom: 10px;
+
+        label{
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        textarea,
+        input.input-text{
+            @extend .form-control;
+        }
+
+        textarea{
+            min-height: 150px;
+        }
+
+        .select2-container{
+            line-height: 2em;
+        }
+    }
+
+    .form-row-first,
+    .form-row-last{
+        width: 47%;
+        overflow: visible;
+    }
+
+    .form-row-first{
+        float: left;
+    }
+
+    .form-row-last{
+        float: right;
+    }
+
+    .form-row-wide{
+        clear: both;
+    }
+}

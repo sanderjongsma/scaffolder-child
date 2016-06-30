@@ -5,7 +5,7 @@
 // Scaffold
 @import "../scaffolder/assets/scss/style.scss";
 
-// Base
+// Variables
 @import "mixins.scss";
 @import "variables/project.scss";
 @import "variables/bootstrap.scss";
@@ -27,6 +27,12 @@
 // Pages
 @import "pages/homepage.scss";
 @import "pages/contact.scss";
+
+// Woocommerce
+@import "woocommerce/woocommerce.scss";
+
+// Plugins
+@import "plugins/ninja-forms.scss";
 
 
 // Base
