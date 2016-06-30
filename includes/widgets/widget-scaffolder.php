@@ -8,9 +8,9 @@ class Scaffolder_Widget extends WP_Widget
     public function __construct()
     {
         parent::__construct(
-            'scaffold',
-            __('Scaffold', 'scaffold'),
-            array('description' => __('Scaffold a widget', 'scaffold'))
+            'scaffolder',
+            __('Scaffolder', 'scaffolder'),
+            array('description' => __('Title', 'scaffolder'))
         );
     }
 
