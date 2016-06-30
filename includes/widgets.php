@@ -15,7 +15,7 @@ require get_stylesheet_directory().'/includes/widgets/widget-scaffolder.php';
  */
 function scaffolder_add_widgets()
 {
-    register_widget('Scaffolder_Widget');
+    // register_widget('Scaffolder_Widget');
 }
 add_action('widgets_init', 'scaffolder_add_widgets');
 
