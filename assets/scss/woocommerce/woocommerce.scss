@@ -8,10 +8,18 @@
     @import "modules/grid.scss";
     @import "modules/forms.scss";
     @import "modules/buttons.scss";
+    @import "modules/tables.scss";
+    @import "modules/products.scss";
 
     // Pages
+    @import "pages/archive.scss";
     @import "pages/product.scss";
 
 }
 
+// Pages (outside scope)
+@import "pages/cart.scss";
+@import "pages/checkout.scss";
+
+// General
 .clear{ clear: both; }

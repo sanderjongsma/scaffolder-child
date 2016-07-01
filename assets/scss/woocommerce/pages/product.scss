@@ -2,6 +2,13 @@
 // Product
 // --------------------------------------------------
 
+&.single{
+
+    //
+
+}
+
+// Data
 div.product{
     @include make-row();
 

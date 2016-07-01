@@ -1,3 +1,21 @@
 //
 // Content
 // --------------------------------------------------
+
+.site{}
+
+.site-content{
+    @extend .container;
+}
+
+.layout{
+    @include make-row();
+}
+
+.content{
+    @include make-md-column(8);
+}
+
+.sidebar{
+    @include make-md-column(4);
+}
