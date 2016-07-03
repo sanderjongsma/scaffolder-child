@@ -15,9 +15,20 @@ div.product{
     div.images,
     div.summary{
         @include make-md-column(6);
+        margin-bottom: 25px;
+    }
+
+    div.images{
+        img{
+            display: block;
+            width: 100%;
+            height: auto;
+            box-shadow: none;
+        }
     }
 
     .woocommerce-tabs{
+        @include make-md-column(12);
         clear: both;
     }
 }

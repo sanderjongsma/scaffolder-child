@@ -10,6 +10,7 @@
     @import "modules/buttons.scss";
     @import "modules/tables.scss";
     @import "modules/products.scss";
+    @import "modules/tabs.scss";
 
     // Pages
     @import "pages/archive.scss";
@@ -20,6 +21,7 @@
 // Pages (outside scope)
 @import "pages/cart.scss";
 @import "pages/checkout.scss";
+@import "pages/account.scss";
 
 // General
 .clear{ clear: both; }

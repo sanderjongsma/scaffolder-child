@@ -10,6 +10,16 @@ if (! defined('ABSPATH')) {
  */
 function woo_template()
 {
-    // Actions
+    /**
+     * Conditionally.
+     */
+    if(is_woo()) {
+        //
+    }
+
+    /**
+     * Loop.
+     */
+    require get_stylesheet_directory().'/includes/woocommerce/template/loop.php';
 }
 add_action('wp', 'woo_template');
