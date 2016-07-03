@@ -1,0 +1,12 @@
+//
+// Products
+// --------------------------------------------------
+
+ul.products{
+    @extend .list-unstyled;
+    @include make-row();
+
+    li.product{
+        @include make-md-column(3);
+    }
+}

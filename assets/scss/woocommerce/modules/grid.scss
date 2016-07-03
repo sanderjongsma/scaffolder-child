@@ -1,0 +1,12 @@
+//
+// Grid
+// --------------------------------------------------
+
+.col2-set{
+    @include make-row();
+
+    .col-1,
+    .col-2{
+        @include make-md-column(6)
+    }
+}

@@ -1,0 +1,37 @@
+//
+// Buttons
+// --------------------------------------------------
+
+input.button,
+button.button,
+a.button{
+    @extend .btn;
+    @extend .btn-default;
+}
+
+// Alt
+input.button.alt,
+button.button.alt,
+a.button.alt{
+    @extend .btn-primary;
+}
+
+// Remove
+a.remove{
+    display: block;
+    font-size: 1.5em;
+    height: 1em;
+    width: 1em;
+    text-align: center;
+    line-height: 1;
+    border-radius: 100%;
+    color: red !important;
+    text-decoration: none;
+    font-weight: 700;
+    border: 0;
+
+    &:hover,
+    &:focus{
+        color: darken(red, 10%) !important;
+    }
+}

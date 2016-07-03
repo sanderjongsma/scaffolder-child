@@ -5,6 +5,9 @@ if (! defined('ABSPATH')) {
     exit;
 }
 
+/**
+ * Content types.
+ */
 function scaffolder_content_types()
 {
     // Content types

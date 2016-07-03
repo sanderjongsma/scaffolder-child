@@ -31,7 +31,7 @@ if (! defined('SCAFFOLDER_BUILD_URL')) {
     define('SCAFFOLDER_BUILD_URL', get_stylesheet_directory_uri().'/assets/build');
 }
 
-// Scaffold setup
+// Scaffolder setup
 if (! function_exists('scaffolder_child_setup')) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -50,7 +50,7 @@ function scaffolder_child_setup()
 
     // Menus
     // register_nav_menus( array(
-    //     'extra' => __( 'Extra', 'scaffold' ),
+    //     'extra' => __( 'Extra', 'scaffolder' ),
     // ) );
 }
 endif;
@@ -147,7 +147,7 @@ function scaffolder_child_enqueue_scripts()
  */
 function scaffolder_child_localize_scripts()
 {
-    wp_localize_script('functions', 'Scaffold', array(
+    wp_localize_script('functions', 'Scaffolder', array(
         'template_uri'      => get_template_directory_uri(),
         'stylesheet_uri'    => get_stylesheet_directory_uri(),
         'home_url'          => get_home_url(),
@@ -166,12 +166,12 @@ add_filter('automatic_updates_is_vcs_checkout', '__return_false', 1);
 require get_stylesheet_directory().'/includes/composer.php';
 
 /**
- * All scaffold filters.
+ * All scaffolder filters.
  */
 require get_stylesheet_directory().'/includes/filters.php';
 
 /**
- * All scaffold filters for admin.
+ * All scaffolder filters for admin.
  */
 require get_stylesheet_directory().'/includes/filters-admin.php';
 
@@ -204,3 +204,8 @@ require get_stylesheet_directory().'/includes/content-types.php';
  * Shortcodes.
  */
 require get_stylesheet_directory().'/includes/shortcodes.php';
+
+/**
+ * Woocommerce.
+ */
+// require get_stylesheet_directory().'/includes/woocommerce.php';

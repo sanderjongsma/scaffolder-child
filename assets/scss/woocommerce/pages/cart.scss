@@ -1,0 +1,50 @@
+//
+// Cart
+// --------------------------------------------------
+
+.woocommerce-cart{
+
+    .wc-proceed-to-checkout{
+        a.checkout-button{
+            @extend .btn-lg;
+            @extend .btn-block;
+        }
+    }
+
+}
+
+.woocommerce{
+
+    table.cart{
+        > thead > tr > th,
+        > thead > tr > td,
+        > tbody > tr > th,
+        > tbody > tr > td{
+            vertical-align: middle;
+        }
+
+        td.actions{
+            text-align: right;
+
+            .coupon{ float: left; }
+        }
+
+        img{
+            width: 32px;
+            height: auto;
+            box-shadow: none;
+        }
+
+        .product-thumbnail{ min-width: 32px; }
+    }
+
+    .cart-collaterals{
+        @include make-row();
+
+        .cart_totals{
+            @include make-md-column(6);
+            @extend .pull-right;
+        }
+    }
+
+}

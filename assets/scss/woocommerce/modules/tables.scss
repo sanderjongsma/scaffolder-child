@@ -1,0 +1,38 @@
+//
+// Tables
+// --------------------------------------------------
+
+table.shop_table{
+    @extend .table;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0,0,0,.1);
+    vertical-align: middle;
+    text-align: left;
+    border-collapse: separate;
+    border-radius: 5px;
+}
+
+// Cart
+table.cart{
+    > thead > tr > th,
+    > thead > tr > td,
+    > tbody > tr > th,
+    > tbody > tr > td{
+        vertical-align: middle;
+    }
+
+    td.actions{
+        text-align: right;
+
+        .coupon{ float: left; }
+    }
+
+    img{
+        width: 32px;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .product-thumbnail{ min-width: 32px; }
+}

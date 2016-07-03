@@ -23,7 +23,7 @@ class Scaffold_Customizer
     {
         // Section
         $customize->add_section('section', array(
-            'title'         => __('Section', 'scaffold'),
+            'title'         => __('Section', 'scaffolder'),
             'priority'      => 130
         ));
     }
