@@ -8,16 +8,16 @@ if (! defined('ABSPATH')) {
 /**
  * Check if woocommerce.
  *
- * @param  array   $only
- * @return boolean
+ * @param  array $only
+ * @return bool
  */
 function is_woo($only = array())
 {
-    if(function_exists('is_woocommerce') && is_woocommerce()) {
+    if (function_exists('is_woocommerce') && is_woocommerce()) {
         return true;
     }
 
-    $pages = array (
+    $pages = array(
         'woocommerce_shop_page_id',
         'woocommerce_terms_page_id',
         'woocommerce_cart_page_id',
@@ -32,8 +32,8 @@ function is_woo($only = array())
         'woocommerce_lost_password_page_id'
     );
 
-    foreach(array_intersect($pages, $only) as $page) {
-        if(get_the_ID() == get_option($page, 0)) {
+    foreach (array_intersect($pages, $only) as $page) {
+        if (get_the_ID() == get_option($page, 0)) {
             return true;
         }
     }
@@ -44,8 +44,8 @@ function is_woo($only = array())
 /**
  * Check of specific woocommerce page.
  *
- * @param  string  $page
- * @return boolean
+ * @param  string $page
+ * @return bool
  */
 function is_woo_page($page)
 {
