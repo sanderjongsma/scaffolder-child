@@ -10,10 +10,10 @@ if (! defined('ABSPATH')) {
  */
 function woo_template()
 {
-    /**
+    /*
      * Conditionally.
      */
-    if(is_woo()) {
+    if (is_woo()) {
         //
     }
 

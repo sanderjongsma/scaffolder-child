@@ -205,7 +205,7 @@ require get_stylesheet_directory().'/includes/content-types.php';
  */
 require get_stylesheet_directory().'/includes/shortcodes.php';
 
-/**
+/*
  * Woocommerce.
  */
 // require get_stylesheet_directory().'/includes/woocommerce.php';
