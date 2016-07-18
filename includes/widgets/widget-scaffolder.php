@@ -10,7 +10,9 @@ class Scaffolder_Widget extends WP_Widget
         parent::__construct(
             'scaffolder',
             __('Scaffolder', 'scaffolder'),
-            array('description' => __('Title', 'scaffolder'))
+            array(
+                'description' => __('Title', 'scaffolder')
+            )
         );
     }
 
@@ -26,9 +28,9 @@ class Scaffolder_Widget extends WP_Widget
         $title = apply_filters('widget_title', $title, $instance, $this->id_base);
 
         echo $args['before_widget'];
-            if ($title) {
-                echo $args['before_title'].$title.$args['after_title'];
-            }
+            echo $title ? $args['before_title'].$title.$args['after_title'] : '';
+
+            // Content
         echo $args['after_widget'];
     }
 
@@ -52,13 +54,13 @@ class Scaffolder_Widget extends WP_Widget
     /**
      * Processing widget options on save.
      *
-     * @param array $new_instance The new options
-     * @param array $old_instance The previous options
+     * @param array $new The new options
+     * @param array $old The previous options
      */
-    public function update($new_instance, $old_instance)
+    public function update($new, $old)
     {
-        $instance          = $old_instance;
-        $instance['title'] = strip_tags($new_instance['title']);
+        $instance          = $old;
+        $instance['title'] = strip_tags($new['title']);
 
         return $instance;
     }
