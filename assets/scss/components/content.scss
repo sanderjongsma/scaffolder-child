@@ -2,20 +2,10 @@
 // Content
 // --------------------------------------------------
 
-.site{}
+.page-header{
 
-.site-content{
-    @extend .container;
 }
 
-.layout{
-    @include make-row();
-}
+.page-title{
 
-.content{
-    @include make-md-column(8);
-}
-
-.sidebar{
-    @include make-md-column(4);
 }

@@ -20,8 +20,12 @@
 @import "components/footer.scss";
 @import "components/navigation.scss";
 @import "components/content.scss";
+@import "components/sidebar.scss";
 
 // Modules
+@import "modules/buttons.scss";
+@import "modules/form.scss";
+@import "modules/widgets.scss";
 @import "modules/slider.scss";
 
 // Pages
@@ -46,8 +50,19 @@ body{}
 // --------------------------------------------------
 
 .site{}
-.site-header{}
-.site-footer{}
-.site-navigation{}
-.site-content{}
-.content-wrap{}
+
+.site-content{
+    @extend .container;
+}
+
+.layout{
+    @include make-row();
+}
+
+.content{
+    @include make-md-column(8);
+}
+
+.sidebar{
+    @include make-md-column(4);
+}
