@@ -1,0 +1,31 @@
+//
+// Messages
+// --------------------------------------------------
+
+.woocommerce-message{
+    @extend .clearfix;
+    @extend .alert;
+    @extend .alert-success;
+
+    a{
+        float: right;
+        color: $alert-success-text;
+        font-weight: bold;
+    }
+}
+
+.woocommerce-error{
+    @extend .alert;
+    @extend .alert-danger;
+    @extend .list-unstyled;
+    padding: 15px;
+
+    a{ color: $alert-danger-text; }
+}
+
+.woocommerce-info{
+    @extend .alert;
+    @extend .alert-info;
+
+    a{ color: $alert-info-text; }
+}
