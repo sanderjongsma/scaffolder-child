@@ -27,6 +27,29 @@ div.product{
         }
     }
 
+    // Variations
+    .variations{
+        @extend .table;
+        vertical-align: middle;
+
+        td.label{
+            @include border-radius(0);
+            display: table-cell;
+            font-size: 100%;
+            color: inherit;
+            text-align: left;
+        }
+
+        label{
+            margin: 0;
+        }
+
+        .reset_variations{
+            float: right;
+        }
+    }
+
+    // Tabs
     .woocommerce-tabs{
         @include make-md-column(12);
         clear: both;
