@@ -1,6 +1,6 @@
 <?php
 /**
- * Content wrappers
+ * Content wrappers.
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/global/wrapper-start.php.
  *
@@ -12,14 +12,12 @@
  *
  * @see         https://docs.woothemes.com/document/template-structure/
  * @author      WooThemes
- * @package     WooCommerce/Templates
  * @version     1.6.4
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-$template = get_option( 'template' );
+$template = get_option('template');
 
 echo '<div class="content content-area">';
