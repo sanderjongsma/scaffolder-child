@@ -10,6 +10,7 @@ form{
         label{
             display: block;
             margin-bottom: 5px;
+            cursor: pointer;
         }
 
         textarea,
@@ -19,6 +20,19 @@ form{
 
         textarea{
             min-height: 150px;
+        }
+
+        input.input-checkbox{
+            display: inline;
+            margin-top: 2px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        label.checkbox{
+            display: inline;
+            vertical-align: middle;
+            margin-top: 0;
         }
 
         .select2-container{

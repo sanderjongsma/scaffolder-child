@@ -7,6 +7,42 @@ ul.products{
     @include make-row();
 
     li.product{
-        @include make-md-column(3);
+        @include make-md-column(4);
+        position: relative;
+
+        h3{
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .button{
+            @extend .btn;
+            @extend .btn-primary;
+        }
+    }
+
+    // Link
+    li.product a{
+        display: block;
+
+        img{
+            @extend .img-responsive;
+            margin-bottom: 15px;
+            box-shadow: none;
+        }
+
+        &:hover,
+        &:focus{
+            text-decoration: none;
+        }
+    }
+
+    // Price
+    li.product .price{
+        display: block;
+        margin-bottom: 10px;
+
+        del,
+        ins{}
     }
 }

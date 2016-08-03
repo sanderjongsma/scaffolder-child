@@ -1,0 +1,44 @@
+//
+// Comments
+// --------------------------------------------------
+
+.comments{
+
+}
+
+.comments-title{
+
+}
+
+.comment-list{
+    @extend .list-unstyled;
+}
+
+.comment-respons{
+
+}
+
+.comment-reply-title{
+
+}
+
+.comment-form{
+
+    > p{
+        @extend .form-group;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="phone"],
+    input[type="email"],
+    input[type="url"]{
+        @extend .form-control;
+    }
+
+    .submit{
+        @extend .btn;
+        @extend .btn-primary;
+    }
+
+}

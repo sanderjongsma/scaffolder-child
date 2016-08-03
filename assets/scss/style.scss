@@ -27,6 +27,7 @@
 @import "modules/form.scss";
 @import "modules/widgets.scss";
 @import "modules/slider.scss";
+@import "modules/comments.scss";
 
 // Pages
 @import "pages/homepage.scss";
@@ -36,7 +37,7 @@
 @import "plugins/ninja-forms.scss";
 
 // Woocommerce
-// @import "woocommerce/woocommerce.scss";
+@import "woocommerce/woocommerce.scss";
 
 
 // Base

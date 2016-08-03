@@ -26,7 +26,17 @@
         td.actions{
             text-align: right;
 
-            .coupon{ float: left; }
+            .coupon{
+                float: left;
+            }
+
+            .input-text{
+                @extend .form-control;
+                display: inline-block;
+                vertical-align: middle;
+                width: auto;
+                height: auto;
+            }
         }
 
         img{
