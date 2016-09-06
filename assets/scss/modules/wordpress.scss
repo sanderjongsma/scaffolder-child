@@ -1,0 +1,32 @@
+//
+// Wordpress
+// --------------------------------------------------
+
+.alignnone,
+a img.alignnone{
+    margin: 5px 15px 15px 0;
+}
+
+.alignleft,
+a img.alignleft{
+    float: left;
+    margin: 5px 15px 15px 0;
+}
+
+.alignright,
+a img.alignright{
+    float: right;
+    margin: 5px 0 15px 15px;
+}
+
+.aligncenter,
+div.aligncenter{
+    display: block;
+    margin: 1em auto 1em auto;
+}
+
+a img.aligncenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
